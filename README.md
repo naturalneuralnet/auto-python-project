@@ -2,6 +2,9 @@
 
 A python script which automates the manual steps usually taken to setup a python project. It generates a project folder, README, TODO and main.py with the appropriate details. The template files are included in the project to allow for easy modification to satisfy more specific use cases.
 
+This script now includes a GUI.
+
+![Alt text](image.png)
 
 ## Table of Contents
 
@@ -19,13 +22,13 @@ Install dependencies
 
 Run the python script
 
-`python main.py`
+`python auto_starter_gui.py`
 
 ## Status
 
 Completed.
 
-If I return to the project in the future I will add a GUI and additional templates such as a Django project template. 
+In the future I hope to add a Command-Line Interface and additional templates such as a Django project template.
 
 ## License
 

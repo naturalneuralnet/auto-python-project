@@ -46,22 +46,23 @@ def get_project_author_name():
         return author_name
 
 
-project = get_project_name()
-author = get_project_author_name()
+# project = get_project_name()
+# author = get_project_author_name()
 
-print(f"The name of the project is: {project}")
-print(f"The author of the project is: {author}")
+# print(f"The name of the project is: {project}")
+# print(f"The author of the project is: {author}")
 
 
 def create_project_dir(name, location):
+    print(location)
     path = location + name
     os.mkdir(path)
     print(f"Project directory {name} created at: {path}")
     return path
 
 
-project_path = create_project_dir(
-    project, "C:/Users/POWEHI/Desktop/Projects/autoProjectStarter/")
+# project_path = create_project_dir(
+#     project, "C:/Users/POWEHI/Desktop/Projects/autoProjectStarter/")
 
 
 def create_readme(project, author, location):
@@ -93,7 +94,7 @@ def create_readme(project, author, location):
 # create_readme(project, author, project_path)
 
 
-def create_readme_from_template():
+def create_readme_from_template(project, author, project_path):
     # render the template
     with open('README.template.md', 'r') as file:
         template = Template(file.read(), trim_blocks=True)
@@ -106,7 +107,7 @@ def create_readme_from_template():
     output_file.close()
 
 
-def create_todo_from_template():
+def create_todo_from_template(project, author, project_path):
     # render the template
     with open('ToDo.template.md', 'r') as file:
         template = Template(file.read(), trim_blocks=True)
@@ -119,7 +120,7 @@ def create_todo_from_template():
     output_file.close()
 
 
-def create_main_from_template():
+def create_main_from_template(project, author, project_path):
     # render the template
     with open('main.template.md', 'r') as file:
         template = Template(file.read(), trim_blocks=True)
@@ -150,24 +151,25 @@ def create_file_from_template(template_file, template_params, output_file_path):
     output_file.close()
 
 
+def create_project_files(project, author, project_path):
+    create_file_from_template(
+        template_file='README.template.md',
+        template_params={"project": project, "author": author},
+        output_file_path=project_path + "/README.md"
+    )
+    create_file_from_template(
+        template_file='ToDo.template.md',
+        template_params={"project": project, "author": author},
+        output_file_path=project_path + "/TODO.md"
+    )
+    create_file_from_template(
+        template_file='main.template.md',
+        template_params={"project": project, "author": author},
+        output_file_path=project_path + "/main.py"
+    )
+
 # create_file_from_template(
 #     template_file='README.template.md',
 #     template_params={"project": project, "author": author},
 #     output_file_path=project_path + "/README.md"
 # )
-# create_file_from_template(
-#     template_file='ToDo.template.md',
-#     template_params={"project": project, "author": author},
-#     output_file_path=project_path + "/TODO.md"
-# )
-# create_file_from_template(
-#     template_file='main.template.md',
-#     template_params={"project": project, "author": author},
-#     output_file_path=project_path + "/main.py"
-# )
-
-create_file_from_template(
-    template_file='README.template.md',
-    template_params={"project": project, "author": author},
-    output_file_path=project_path + "/README.md"
-)
