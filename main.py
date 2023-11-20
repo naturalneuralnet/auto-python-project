@@ -4,10 +4,9 @@ from mdutils.mdutils import MdUtils
 import time
 from jinja2 import Template
 import codecs
-# repeatedly ask the user until a valid input is acheived
-# suggest a better name to the user - will do this later
-# exit after three attempts
 
+
+# Following this guide, courtesy of Robert Heaton
 unix_time = str(int(time.time()))
 
 
@@ -61,9 +60,6 @@ def create_project_dir(name, location):
     return path
 
 
-# project_path = create_project_dir(
-#     project, "C:/Users/POWEHI/Desktop/Projects/autoProjectStarter/")
-
 
 def create_readme(project, author, location):
     # create a README file with the project and author name
@@ -90,8 +86,6 @@ def create_readme(project, author, location):
     # THIS NEEDS TO BE LAST
     mdFile.create_md_file()
 
-
-# create_readme(project, author, project_path)
 
 
 def create_readme_from_template(project, author, project_path):

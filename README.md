@@ -1,6 +1,6 @@
 ## About
 
-A python script which automates the manual steps usually taken to setup a python project. It generates a project folder, README, TODO and main.py with the appropriate details. The template files are included in the project to allow for easy modification to satisfy more specific use cases.
+A python script which automates the manual steps usually taken to setup a project. It generates a project folder, README, TODO and main.py with the appropriate details. The template files are included in the project to allow for easy modification to satisfy more specific use cases.
 
 This script now includes a GUI.
 
