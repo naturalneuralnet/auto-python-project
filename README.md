@@ -4,6 +4,8 @@ A python script which automates the manual steps usually taken to setup a projec
 
 This script now includes a GUI.
 
+This project now includes a CLI.
+
 ![Alt text](image.png)
 
 ## Table of Contents
@@ -24,11 +26,17 @@ Run the python script
 
 `python auto_starter_gui.py`
 
+A CLI has been added. Run with -p argument to create all the project files or the -r option to create a README.md only. For example,
+
+`python auto_starter_cli.py -p C:\Users\Nattie project_name author`
+
+will create a directory called project_name at the given location as well as the README.md, TODO.md and main.py files inside the project_name directory. 
+
 ## Status
 
 Completed.
 
-In the future I hope to add a Command-Line Interface and additional templates such as a Django project template.
+In the future I hope to add additional templates such as a Django project template.
 
 ## License
 
